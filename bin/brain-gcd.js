@@ -1,3 +1,5 @@
+import playGame from '../src/index.js';
+
 const gcd = (a, b) => {
     if (!b) {
       return a;

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import playGame from '../src/index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
