@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import playGame from '../src/index.js';
 
 const gcd = (a, b) => {
