@@ -16,15 +16,15 @@ const calculate = (a, operator, b) => {
 };
 
 const generateRound = () => {
-  const number_1 = generateRandomNumber(1, 50);
-  const number_2 = generateRandomNumber(1, 50);
+  const number1 = generateRandomNumber(1, 50);
+  const number2 = generateRandomNumber(1, 50);
   const operator = operators[Math.floor(Math.random() * operators.length)];
-  const question = `${number_1} ${operator} ${number_2}`;
-  const answer = String(calculate(number_1, operator, number_2));
+  const question = `${number1} ${operator} ${number2}`;
+  const answer = String(calculate(number1, operator, number2));
   return [question, answer];
 };
 
-export const playCalcGame = (playGame) => {
+export default (playGame) => {
   const description = "What is the result of the expression?";
   playGame(description, generateRound);
 };
