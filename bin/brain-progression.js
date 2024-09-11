@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import playGame from '../src/index.js';
-import generateRandomNumber from './src/utils.js';
+import generateRandomNumber from '../src/utils.js';
 
 const description = 'What number is missing in the progression?';
 
