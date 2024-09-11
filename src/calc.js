@@ -1,14 +1,14 @@
-import { generateRandomNumber } from "./utils.js";
+import { generateRandomNumber } from './utils.js';
 
-const operators = ["+", "-", "*"];
+const operators = ['+', '-', '*'];
 
 const calculate = (a, operator, b) => {
   switch (operator) {
-    case "+":
+    case '+':
       return a + b;
-    case "-":
+    case '-':
       return a - b;
-    case "*":
+    case '*':
       return a * b;
     default:
       throw new Error(`Unknown operator: '${operator}'`);
@@ -25,6 +25,6 @@ const generateRound = () => {
 };
 
 export default (playGame) => {
-  const description = "What is the result of the expression?";
+  const description = 'What is the result of the expression?';
   playGame(description, generateRound);
 };

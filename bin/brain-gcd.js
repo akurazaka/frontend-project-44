@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import playGame from "../src/index.js";
+import playGame from '../src/index.js';
 
 const getGCD = (a, b) => {
   if (!b) {
@@ -8,7 +8,7 @@ const getGCD = (a, b) => {
   return getGCD(b, a % b);
 };
 
-const description = "Find the greatest common divisor of given numbers.";
+const description = 'Find the greatest common divisor of given numbers.';
 
 const generateRandomNumber = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
