@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-import playGame from '../src/index.js';
+import playGame from "../src/index.js";
+import { generateRandomNumber } from "../utils.js";
 
-const description = 'What number is missing in the progression?';
-
-const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const description = "What number is missing in the progression?";
 
 const generateProgression = (start, step, length) => {
   const progression = [];
@@ -14,14 +13,14 @@ const generateProgression = (start, step, length) => {
 };
 
 const generateRound = () => {
+  const progressionLength = 10;
   const start = generateRandomNumber(1, 10);
-  const step = generateRandomNumber(1, 10);
-  const length = 10;
-  const progression = generateProgression(start, step, length);
-  const hiddenIndex = generateRandomNumber(0, length - 1);
+  const step = generateRandomNumber(1, 5);
+  const progression = generateProgression(start, step, progressionLength);
+  const hiddenIndex = generateRandomNumber(0, progression.length - 1);
   const correctAnswer = String(progression[hiddenIndex]);
-  progression[hiddenIndex] = '..';
-  const question = progression.join(' ');
+  progression[hiddenIndex] = "..";
+  const question = progression.join(" ");
   return [question, correctAnswer];
 };
 
