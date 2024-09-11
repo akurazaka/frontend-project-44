@@ -10,8 +10,7 @@ const getGCD = (a, b) => {
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const generateRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+const generateRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateRound = () => {
   const number1 = generateRandomNumber(1, 100);
