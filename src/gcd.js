@@ -6,7 +6,7 @@ const getGCD = (a, b) => {
   }
   return getGCD(b, a % b);
 };
-  
+
 const description = 'Find the greatest common divisor of given numbers.';
 
 const generateRound = () => {
